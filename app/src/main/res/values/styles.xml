@@ -1,0 +1,14 @@
+<resources>
+
+  <style name="App" parent="App.Base" />
+
+  <style name="App.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="colorSurface">@color/colorSurface</item>
+    <item name="colorOnSurface">@color/colorOnSurface</item>
+
+    <item name="android:windowBackground">@color/colorSurfaceDark</item>
+  </style>
+</resources>
