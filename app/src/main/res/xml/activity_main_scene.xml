@@ -21,17 +21,12 @@
   <Transition
       app:constraintSetEnd="@id/constraintSet_second"
       app:constraintSetStart="@id/constraintSet_first" />
-  <Transition
-      app:constraintSetEnd="@id/constraintSet_first"
-      app:constraintSetStart="@id/constraintSet_second" />
 
 
   <Transition
       app:constraintSetEnd="@+id/constraintSet_first_drawer"
       app:constraintSetStart="@id/constraintSet_first" />
-  <Transition
-      app:constraintSetEnd="@id/constraintSet_first"
-      app:constraintSetStart="@+id/constraintSet_first_drawer" />
+
   <Transition
       app:constraintSetEnd="@id/constraintSet_second"
       app:constraintSetStart="@+id/constraintSet_first_drawer" />
@@ -39,9 +34,7 @@
   <Transition
       app:constraintSetEnd="@id/constraintSet_first_sheet"
       app:constraintSetStart="@id/constraintSet_first" />
-  <Transition
-      app:constraintSetEnd="@id/constraintSet_first"
-      app:constraintSetStart="@id/constraintSet_first_sheet" />
+
   <Transition
       app:constraintSetEnd="@id/constraintSet_second"
       app:constraintSetStart="@id/constraintSet_first_sheet" />
@@ -49,17 +42,12 @@
   <Transition
       app:constraintSetEnd="@id/constraintSet_first_sheet"
       app:constraintSetStart="@+id/constraintSet_first_drawer" />
-  <Transition
-      app:constraintSetEnd="@+id/constraintSet_first_drawer"
-      app:constraintSetStart="@id/constraintSet_first_sheet" />
 
 
   <Transition
       app:constraintSetEnd="@+id/constraintSet_second_drawer"
       app:constraintSetStart="@id/constraintSet_second" />
-  <Transition
-      app:constraintSetEnd="@id/constraintSet_second"
-      app:constraintSetStart="@+id/constraintSet_second_drawer" />
+
   <Transition
       app:constraintSetEnd="@id/constraintSet_first"
       app:constraintSetStart="@+id/constraintSet_second_drawer" />
@@ -67,9 +55,7 @@
   <Transition
       app:constraintSetEnd="@id/constraintSet_second_sheet"
       app:constraintSetStart="@id/constraintSet_second" />
-  <Transition
-      app:constraintSetEnd="@id/constraintSet_second"
-      app:constraintSetStart="@id/constraintSet_second_sheet" />
+
   <Transition
       app:constraintSetEnd="@id/constraintSet_first"
       app:constraintSetStart="@id/constraintSet_second_sheet" />
@@ -77,9 +63,6 @@
   <Transition
       app:constraintSetEnd="@id/constraintSet_second_sheet"
       app:constraintSetStart="@+id/constraintSet_second_drawer" />
-  <Transition
-      app:constraintSetEnd="@+id/constraintSet_second_drawer"
-      app:constraintSetStart="@id/constraintSet_second_sheet" />
 
 
   <ConstraintSet android:id="@+id/constraintSet_first" />
