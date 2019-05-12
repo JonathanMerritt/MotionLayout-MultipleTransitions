@@ -15,9 +15,12 @@
   -->
 
 <resources>
-  <item name="drawer_width_percent" format="float" type="dimen">0.700</item>
-  <item name="drawer_guide_percent" format="float" type="dimen">@dimen/drawer_width_percent</item>
-  <item name="sheet_height_percent" format="float" type="dimen">0.800</item>
-  <item name="sheet_guide_percent" format="float" type="dimen">0.200</item>
-  <item name="button_width_percent" format="float" type="dimen">0.250</item>
+  <item name="width_drawer" format="float" type="dimen">0.700</item>
+  <item name="guide_drawer" format="float" type="dimen">@dimen/width_drawer</item>
+  <item name="width_first_drawer_handle" format="float" type="dimen">0.100</item>
+  <item name="width_drawer_handle" format="float" type="dimen">0.300</item>
+  <item name="height_sheet" format="float" type="dimen">0.800</item>
+  <item name="guide_sheet" format="float" type="dimen">0.200</item>
+  <item name="height_sheet_handle" format="float" type="dimen">@dimen/guide_sheet</item>
+  <item name="width_button" format="float" type="dimen">0.250</item>
 </resources>

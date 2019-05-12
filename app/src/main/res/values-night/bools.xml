@@ -15,5 +15,5 @@
   -->
 
 <resources>
-  <bool name="is_mode_day">false</bool>
+  <bool name="day_mode">false</bool>
 </resources>

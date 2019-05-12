@@ -15,5 +15,5 @@
   -->
 
 <resources>
-  <integer name="transition_duration">450</integer>
+  <integer name="duration_transitions">450</integer>
 </resources>

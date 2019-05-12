@@ -32,7 +32,7 @@
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toStartOf="@id/activityMain_drawer_guide"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintWidth_percent="@dimen/drawer_width_percent" />
+      app:layout_constraintWidth_percent="@dimen/width_drawer" />
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/activityMain_drawer_guide"
@@ -45,12 +45,12 @@
       android:id="@+id/activityMain_drawer_handle"
       android:layout_width="0dp"
       android:layout_height="0dp"
+      android:layout_marginStart="20dp"
+      android:visibility="invisible"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toEndOf="@id/activityMain_drawer_guide"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintWidth_percent="0.080"
-      android:visibility="invisible"
-      android:layout_marginStart="24dp"/>
+      app:layout_constraintWidth_percent="@dimen/width_first_drawer_handle" />
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/activityMain_sheet_guide"
@@ -63,11 +63,11 @@
       android:id="@+id/activityMain_sheet_handle"
       android:layout_width="0dp"
       android:layout_height="0dp"
+      android:visibility="invisible"
+      app:layout_constraintBottom_toTopOf="@id/activityMain_sheet_guide"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHeight_percent="0.000"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintBottom_toTopOf="@id/activityMain_sheet_guide"
-      android:visibility="invisible"/>
+      app:layout_constraintStart_toStartOf="parent" />
 
   <FrameLayout
       android:id="@+id/activityMain_sheet"
@@ -75,7 +75,7 @@
       android:layout_height="0dp"
       android:background="@color/colorSurfaceDark"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHeight_percent="@dimen/sheet_height_percent"
+      app:layout_constraintHeight_percent="@dimen/height_sheet"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/activityMain_sheet_guide" />
 
@@ -85,50 +85,48 @@
       android:layout_width="0dp"
       android:layout_height="0dp"
       android:alpha="0"
-      android:text="@string/activityMain_to_first_name"
-      android:textColor="@color/colorAccent"
+      android:text="@string/title_to_first"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHeight_percent="0.000"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="@id/activityMain_to_second"
-      app:layout_constraintWidth_percent="@dimen/button_width_percent" />
+      app:layout_constraintWidth_percent="@dimen/width_button" />
 
   <androidx.appcompat.widget.AppCompatButton
       android:id="@+id/activityMain_to_second"
       style="@style/Widget.MaterialComponents.Button.TextButton"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:text="@string/activityMain_to_second_name"
-      android:textColor="@color/colorPrimaryDark"
+      android:text="@string/title_to_second"
       app:layout_constraintBottom_toTopOf="@id/activityMain_to_drawer"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_chainStyle="packed"
-      app:layout_constraintWidth_percent="@dimen/button_width_percent" />
+      app:layout_constraintWidth_percent="@dimen/width_button" />
 
   <androidx.appcompat.widget.AppCompatButton
       android:id="@+id/activityMain_to_drawer"
-      style="@style/Widget.MaterialComponents.Button"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:text="@string/activityMain_to_drawer_name"
+      android:text="@string/title_to_drawer"
       app:layout_constraintBottom_toTopOf="@id/activityMain_to_sheet"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/activityMain_to_second"
-      app:layout_constraintWidth_percent="@dimen/button_width_percent" />
+      app:layout_constraintWidth_percent="@dimen/width_button" />
 
   <androidx.appcompat.widget.AppCompatButton
       android:id="@+id/activityMain_to_sheet"
-      style="@style/Widget.MaterialComponents.Button"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:text="@string/activityMain_to_sheet_name"
+      android:text="@string/title_to_sheet"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/activityMain_to_drawer"
-      app:layout_constraintWidth_percent="@dimen/button_width_percent" />
+      app:layout_constraintWidth_percent="@dimen/width_button" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

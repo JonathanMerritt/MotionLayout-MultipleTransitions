@@ -16,8 +16,8 @@
 
 <resources>
   <string name="app_name">MotionLayout-MultipleTransitions</string>
-  <string name="activityMain_to_first_name">first</string>
-  <string name="activityMain_to_second_name">second</string>
-  <string name="activityMain_to_drawer_name">drawer</string>
-  <string name="activityMain_to_sheet_name">sheet</string>
+  <string name="title_to_first">first</string>
+  <string name="title_to_second">second</string>
+  <string name="title_to_drawer">drawer</string>
+  <string name="title_to_sheet">sheet</string>
 </resources>
