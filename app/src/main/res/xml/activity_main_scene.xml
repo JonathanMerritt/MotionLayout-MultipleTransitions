@@ -19,64 +19,52 @@
     app:defaultDuration="@integer/duration_transitions">
 
   <Transition
-      app:constraintSetEnd="@id/constraintSet_second"
-      app:constraintSetStart="@id/constraintSet_first" />
-
-  <Transition
-      app:constraintSetEnd="@+id/constraintSet_first_drawer"
+      app:constraintSetEnd="@id/constraintSet_first_drawer"
       app:constraintSetStart="@id/constraintSet_first">
     <OnSwipe
         app:dragDirection="dragRight"
+        app:maxAcceleration="50"
+        app:maxVelocity="500"
         app:touchAnchorId="@id/activityMain_drawer_handle"
         app:touchAnchorSide="left"
         app:touchRegionId="@id/activityMain_drawer_handle" />
   </Transition>
+
   <Transition
       app:constraintSetEnd="@id/constraintSet_first_sheet"
       app:constraintSetStart="@id/constraintSet_first">
     <OnSwipe
         app:dragDirection="dragUp"
+        app:maxAcceleration="50"
+        app:maxVelocity="500"
         app:touchAnchorId="@id/activityMain_sheet_handle"
         app:touchAnchorSide="top"
         app:touchRegionId="@id/activityMain_sheet_handle" />
   </Transition>
-  <Transition
-      app:constraintSetEnd="@id/constraintSet_first_sheet"
-      app:constraintSetStart="@+id/constraintSet_first_drawer" />
-  <Transition
-      app:constraintSetEnd="@id/constraintSet_second"
-      app:constraintSetStart="@+id/constraintSet_first_drawer" />
-  <Transition
-      app:constraintSetEnd="@id/constraintSet_second"
-      app:constraintSetStart="@id/constraintSet_first_sheet" />
 
   <Transition
-      app:constraintSetEnd="@+id/constraintSet_second_drawer"
+      app:constraintSetEnd="@id/constraintSet_second_drawer"
       app:constraintSetStart="@id/constraintSet_second">
     <OnSwipe
         app:dragDirection="dragRight"
+        app:maxAcceleration="50"
+        app:maxVelocity="500"
         app:touchAnchorId="@id/activityMain_drawer_handle"
         app:touchAnchorSide="left"
         app:touchRegionId="@id/activityMain_drawer_handle" />
   </Transition>
+
   <Transition
       app:constraintSetEnd="@id/constraintSet_second_sheet"
       app:constraintSetStart="@id/constraintSet_second">
     <OnSwipe
         app:dragDirection="dragUp"
+        app:maxAcceleration="50"
+        app:maxVelocity="500"
         app:touchAnchorId="@id/activityMain_sheet_handle"
         app:touchAnchorSide="top"
         app:touchRegionId="@id/activityMain_sheet_handle" />
   </Transition>
-  <Transition
-      app:constraintSetEnd="@id/constraintSet_second_sheet"
-      app:constraintSetStart="@+id/constraintSet_second_drawer" />
-  <Transition
-      app:constraintSetEnd="@id/constraintSet_first"
-      app:constraintSetStart="@+id/constraintSet_second_drawer" />
-  <Transition
-      app:constraintSetEnd="@id/constraintSet_first"
-      app:constraintSetStart="@id/constraintSet_second_sheet" />
 
 
   <ConstraintSet android:id="@+id/constraintSet_first" />
@@ -91,9 +79,8 @@
         android:orientation="vertical">
       <Layout app:layout_constraintGuide_percent="@dimen/guide_drawer" />
     </Constraint>
-
     <Constraint
-        android:id="@+id/activityMain_drawer_handle"
+        android:id="@id/activityMain_drawer_handle"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="0dp">
@@ -113,7 +100,7 @@
           app:layout_constraintStart_toEndOf="@id/activityMain_drawer_guide"
           app:layout_constraintTop_toTopOf="parent"
           app:layout_constraintVertical_chainStyle="packed"
-          app:layout_constraintWidth_percent="@dimen/width_button" />
+          app:layout_constraintWidth_percent="@dimen/width_button_drawer" />
     </Constraint>
     <Constraint
         android:id="@id/activityMain_to_second"
@@ -124,7 +111,7 @@
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toEndOf="@id/activityMain_drawer_guide"
           app:layout_constraintTop_toBottomOf="@id/activityMain_to_first"
-          app:layout_constraintWidth_percent="@dimen/width_button" />
+          app:layout_constraintWidth_percent="@dimen/width_button_drawer" />
     </Constraint>
     <Constraint
         android:id="@id/activityMain_to_drawer"
@@ -135,7 +122,7 @@
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintHeight_percent="0.000"
           app:layout_constraintStart_toEndOf="@id/activityMain_drawer_guide"
-          app:layout_constraintWidth_percent="@dimen/width_button" />
+          app:layout_constraintWidth_percent="@dimen/width_button_drawer" />
       <PropertySet android:alpha="0" />
     </Constraint>
     <Constraint
@@ -147,13 +134,24 @@
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toEndOf="@id/activityMain_drawer_guide"
           app:layout_constraintTop_toBottomOf="@id/activityMain_to_second"
-          app:layout_constraintWidth_percent="@dimen/width_button" />
+          app:layout_constraintWidth_percent="@dimen/width_button_drawer" />
     </Constraint>
   </ConstraintSet>
 
   <ConstraintSet
       android:id="@+id/constraintSet_first_sheet"
       app:deriveConstraintsFrom="@id/constraintSet_first">
+    <Constraint
+        android:id="@id/activityMain_drawer_handle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="0dp">
+      <Layout
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toEndOf="@id/activityMain_drawer_guide"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintWidth_percent="0.000" />
+    </Constraint>
     <Constraint
         android:id="@id/activityMain_sheet_guide"
         android:layout_width="0dp"
@@ -162,7 +160,7 @@
       <Layout app:layout_constraintGuide_percent="@dimen/guide_sheet" />
     </Constraint>
     <Constraint
-        android:id="@+id/activityMain_sheet_handle"
+        android:id="@id/activityMain_sheet_handle"
         android:layout_width="0dp"
         android:layout_height="0dp">
       <Layout
@@ -181,7 +179,7 @@
           app:layout_constraintHorizontal_chainStyle="packed"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toTopOf="parent"
-          app:layout_constraintWidth_percent="@dimen/width_button" />
+          app:layout_constraintWidth_percent="@dimen/width_button_sheet" />
     </Constraint>
     <Constraint
         android:id="@id/activityMain_to_second"
@@ -192,7 +190,7 @@
           app:layout_constraintEnd_toStartOf="@id/activityMain_to_drawer"
           app:layout_constraintStart_toEndOf="@id/activityMain_to_first"
           app:layout_constraintTop_toTopOf="parent"
-          app:layout_constraintWidth_percent="@dimen/width_button" />
+          app:layout_constraintWidth_percent="@dimen/width_button_sheet" />
     </Constraint>
     <Constraint
         android:id="@id/activityMain_to_drawer"
@@ -203,7 +201,7 @@
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toEndOf="@id/activityMain_to_second"
           app:layout_constraintTop_toTopOf="parent"
-          app:layout_constraintWidth_percent="@dimen/width_button" />
+          app:layout_constraintWidth_percent="@dimen/width_button_sheet" />
     </Constraint>
     <Constraint
         android:id="@id/activityMain_to_sheet"
@@ -214,7 +212,7 @@
           app:layout_constraintHeight_percent="0.000"
           app:layout_constraintStart_toEndOf="@id/activityMain_to_second"
           app:layout_constraintTop_toTopOf="@id/activityMain_to_drawer"
-          app:layout_constraintWidth_percent="@dimen/width_button" />
+          app:layout_constraintWidth_percent="@dimen/width_button_sheet" />
       <PropertySet android:alpha="0" />
     </Constraint>
   </ConstraintSet>
