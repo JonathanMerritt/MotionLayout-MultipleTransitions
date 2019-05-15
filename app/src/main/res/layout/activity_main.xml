@@ -51,7 +51,7 @@
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toEndOf="@id/activityMain_drawer_guide"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintWidth_percent="@dimen/width_first_drawer_handle" />
+      app:layout_constraintWidth_percent="@dimen/width_drawer_handle_main" />
 
   <androidx.constraintlayout.widget.Guideline
       android:id="@+id/activityMain_sheet_guide"

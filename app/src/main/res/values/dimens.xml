@@ -17,7 +17,7 @@
 <resources>
   <item name="width_drawer" format="float" type="dimen">0.700</item>
   <item name="guide_drawer" format="float" type="dimen">@dimen/width_drawer</item>
-  <item name="width_first_drawer_handle" format="float" type="dimen">0.080</item>
+  <item name="width_drawer_handle_main" format="float" type="dimen">0.080</item>
   <item name="width_drawer_handle" format="float" type="dimen">0.300</item>
   <item name="height_sheet" format="float" type="dimen">0.800</item>
   <item name="guide_sheet" format="float" type="dimen">0.200</item>
