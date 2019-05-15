@@ -69,9 +69,7 @@
 
   <ConstraintSet android:id="@+id/constraintSet_first" />
 
-  <ConstraintSet
-      android:id="@+id/constraintSet_first_drawer"
-      app:deriveConstraintsFrom="@id/constraintSet_first">
+  <ConstraintSet android:id="@+id/constraintSet_first_drawer">
     <Constraint
         android:id="@id/activityMain_drawer_guide"
         android:layout_width="0dp"
@@ -138,9 +136,7 @@
     </Constraint>
   </ConstraintSet>
 
-  <ConstraintSet
-      android:id="@+id/constraintSet_first_sheet"
-      app:deriveConstraintsFrom="@id/constraintSet_first">
+  <ConstraintSet android:id="@+id/constraintSet_first_sheet">
     <Constraint
         android:id="@id/activityMain_drawer_handle"
         android:layout_width="0dp"
@@ -217,9 +213,7 @@
     </Constraint>
   </ConstraintSet>
 
-  <ConstraintSet
-      android:id="@+id/constraintSet_second"
-      app:deriveConstraintsFrom="@id/constraintSet_first">
+  <ConstraintSet android:id="@+id/constraintSet_second">
     <Constraint
         android:id="@id/activityMain_to_first"
         android:layout_width="0dp"
