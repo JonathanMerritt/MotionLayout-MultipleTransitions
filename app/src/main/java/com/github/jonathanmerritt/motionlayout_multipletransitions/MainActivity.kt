@@ -26,13 +26,12 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity(activity_main) {
   override fun onPostCreate(bundle: Bundle?) {
     super.onPostCreate(bundle)
-    var isFirst = true
 
+    var isFirst = true
     activityMain_to_first.setOnClickListener {
       activityMain_motion.transitionToState(constraintSet_first)
       isFirst = true
     }
-
     activityMain_to_second.setOnClickListener {
       activityMain_motion.transitionToState(constraintSet_second)
       isFirst = false
@@ -42,7 +41,6 @@ class MainActivity : AppCompatActivity(activity_main) {
       val drawer = if (isFirst) constraintSet_first_drawer else constraintSet_second_drawer
       activityMain_motion.transitionToState(drawer)
     }
-
     activityMain_to_sheet.setOnClickListener {
       val sheet = if (isFirst) constraintSet_first_sheet else constraintSet_second_sheet
       activityMain_motion.transitionToState(sheet)

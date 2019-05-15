@@ -45,7 +45,7 @@
       android:id="@+id/activityMain_drawer_handle"
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:layout_marginStart="40dp"
+      android:layout_marginStart="32dp"
       android:background="@color/colorPrimaryDarkTranslucent"
       android:visibility="visible"
       app:layout_constraintBottom_toBottomOf="parent"
@@ -83,7 +83,7 @@
 
   <androidx.appcompat.widget.AppCompatButton
       android:id="@+id/activityMain_to_first"
-      style="@style/Widget.MaterialComponents.Button.TextButton"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
       android:layout_width="0dp"
       android:layout_height="0dp"
       android:alpha="0"
@@ -96,7 +96,7 @@
 
   <androidx.appcompat.widget.AppCompatButton
       android:id="@+id/activityMain_to_second"
-      style="@style/Widget.MaterialComponents.Button.TextButton"
+      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:text="@string/title_to_second"
@@ -109,7 +109,7 @@
 
   <androidx.appcompat.widget.AppCompatButton
       android:id="@+id/activityMain_to_drawer"
-      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      style="@style/Widget.MaterialComponents.Button"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:text="@string/title_to_drawer"
@@ -121,7 +121,7 @@
 
   <androidx.appcompat.widget.AppCompatButton
       android:id="@+id/activityMain_to_sheet"
-      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+      style="@style/Widget.MaterialComponents.Button"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:text="@string/title_to_sheet"
