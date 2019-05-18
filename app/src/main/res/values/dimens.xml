@@ -17,7 +17,7 @@
 <resources>
   <item name="width_drawer" format="float" type="dimen">0.700</item>
   <item name="guide_drawer" format="float" type="dimen">@dimen/width_drawer</item>
-  <item name="width_drawer_handle_main" format="float" type="dimen">0.080</item>
+  <item name="width_drawer_handle_main" format="float" type="dimen">0.050</item>
   <item name="width_drawer_handle" format="float" type="dimen">0.300</item>
 
   <item name="height_sheet" format="float" type="dimen">0.800</item>
@@ -27,4 +27,6 @@
   <item name="width_button" format="float" type="dimen">0.350</item>
   <item name="width_button_drawer" format="float" type="dimen">0.250</item>
   <item name="width_button_sheet" format="float" type="dimen">0.300</item>
+
+  <dimen name="radius_corner_button">20dp</dimen>
 </resources>

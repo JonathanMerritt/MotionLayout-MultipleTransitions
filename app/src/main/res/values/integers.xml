@@ -15,5 +15,7 @@
   -->
 
 <resources>
-  <integer name="duration_transitions">450</integer>
+  <integer name="duration_transition_default">450</integer>
+
+  <integer name="acceleration_max_default">100</integer>
 </resources>

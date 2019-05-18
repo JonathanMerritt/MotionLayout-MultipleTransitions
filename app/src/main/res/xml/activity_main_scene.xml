@@ -16,15 +16,14 @@
 
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:defaultDuration="@integer/duration_transitions">
+    app:defaultDuration="@integer/duration_transition_default">
 
   <Transition
       app:constraintSetEnd="@id/constraintSet_first_drawer"
       app:constraintSetStart="@id/constraintSet_first">
     <OnSwipe
         app:dragDirection="dragRight"
-        app:maxAcceleration="50"
-        app:maxVelocity="500"
+        app:maxAcceleration="@integer/acceleration_max_default"
         app:touchAnchorId="@id/activityMain_drawer_handle"
         app:touchAnchorSide="left"
         app:touchRegionId="@id/activityMain_drawer_handle" />
@@ -35,8 +34,7 @@
       app:constraintSetStart="@id/constraintSet_first">
     <OnSwipe
         app:dragDirection="dragUp"
-        app:maxAcceleration="50"
-        app:maxVelocity="500"
+        app:maxAcceleration="@integer/acceleration_max_default"
         app:touchAnchorId="@id/activityMain_sheet_handle"
         app:touchAnchorSide="top"
         app:touchRegionId="@id/activityMain_sheet_handle" />
@@ -47,8 +45,7 @@
       app:constraintSetStart="@id/constraintSet_second">
     <OnSwipe
         app:dragDirection="dragRight"
-        app:maxAcceleration="50"
-        app:maxVelocity="500"
+        app:maxAcceleration="@integer/acceleration_max_default"
         app:touchAnchorId="@id/activityMain_drawer_handle"
         app:touchAnchorSide="left"
         app:touchRegionId="@id/activityMain_drawer_handle" />
@@ -59,8 +56,7 @@
       app:constraintSetStart="@id/constraintSet_second">
     <OnSwipe
         app:dragDirection="dragUp"
-        app:maxAcceleration="50"
-        app:maxVelocity="500"
+        app:maxAcceleration="@integer/acceleration_max_default"
         app:touchAnchorId="@id/activityMain_sheet_handle"
         app:touchAnchorSide="top"
         app:touchRegionId="@id/activityMain_sheet_handle" />
@@ -97,7 +93,7 @@
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toEndOf="@id/activityMain_drawer_guide"
           app:layout_constraintTop_toTopOf="parent"
-          app:layout_constraintVertical_chainStyle="packed"
+          app:layout_constraintVertical_chainStyle="spread"
           app:layout_constraintWidth_percent="@dimen/width_button_drawer" />
     </Constraint>
     <Constraint
@@ -172,7 +168,7 @@
       <Layout
           app:layout_constraintBottom_toTopOf="@id/activityMain_sheet_guide"
           app:layout_constraintEnd_toStartOf="@id/activityMain_to_second"
-          app:layout_constraintHorizontal_chainStyle="packed"
+          app:layout_constraintHorizontal_chainStyle="spread"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toTopOf="parent"
           app:layout_constraintWidth_percent="@dimen/width_button_sheet" />
