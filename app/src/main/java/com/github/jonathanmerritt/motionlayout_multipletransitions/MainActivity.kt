@@ -16,45 +16,25 @@
 
 package com.github.jonathanmerritt.motionlayout_multipletransitions
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.github.jonathanmerritt.motionlayout_multipletransitions.R.id.*
 import com.github.jonathanmerritt.motionlayout_multipletransitions.R.layout.activity_main
 import kotlinx.android.synthetic.main.activity_main.*
-
-
 class MainActivity : AppCompatActivity(activity_main) {
-  override fun onPostCreate(bundle: Bundle?) {
-    super.onPostCreate(bundle)
+  override fun onBackPressed() = activityMain_motion.run {
+    when (currentState) {
+      constraint_set_expand,
+      constraint_set_collapse,
+      constraint_set_drawer,
+      constraint_set_sheet -> transitionToState(constraint_set_main)
 
-    var isFirst = true
-    activityMain_to_first.setOnClickListener {
-      activityMain_motion.transitionToState(constraintSet_first)
-      isFirst = true
-    }
-    activityMain_to_second.setOnClickListener {
-      activityMain_motion.transitionToState(constraintSet_second)
-      isFirst = false
-    }
+      constraint_set_drawer_expand,
+      constraint_set_sheet_expand -> transitionToState(constraint_set_expand)
 
-    activityMain_to_drawer.setOnClickListener {
-      val drawer = if (isFirst) constraintSet_first_drawer else constraintSet_second_drawer
-      activityMain_motion.transitionToState(drawer)
-    }
-    activityMain_to_sheet.setOnClickListener {
-      val sheet = if (isFirst) constraintSet_first_sheet else constraintSet_second_sheet
-      activityMain_motion.transitionToState(sheet)
-    }
-  }
+      constraint_set_drawer_collapse,
+      constraint_set_sheet_collapse -> transitionToState(constraint_set_collapse)
 
-  override fun onBackPressed() {
-    when (activityMain_motion.currentState) {
-      constraintSet_first_drawer,
-      constraintSet_first_sheet,
-      constraintSet_second -> activityMain_to_first.callOnClick()
-
-      constraintSet_second_drawer,
-      constraintSet_second_sheet -> activityMain_to_second.callOnClick()
+      -1 -> transitionToStart()
 
       else -> super.onBackPressed()
     }

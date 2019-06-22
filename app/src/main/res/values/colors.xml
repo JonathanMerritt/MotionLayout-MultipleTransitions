@@ -19,8 +19,8 @@
   <color name="colorPrimaryDark">#0288D1</color>
   <color name="colorAccent">#D84315</color>
 
-  <color name="colorSurface">#fefefe</color>
-  <color name="colorSurfaceDark">#f3f3f3</color>
+  <color name="colorSurface">#FEFEFE</color>
+  <color name="colorSubSurface">#F3F3F3</color>
 
-  <color name="colorOnSurface">#383838</color>
+  <color name="colorOnSurface">#95727272</color>
 </resources>

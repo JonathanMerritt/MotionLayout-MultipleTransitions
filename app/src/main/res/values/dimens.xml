@@ -15,18 +15,19 @@
   -->
 
 <resources>
+  <item name="height_toolbar" format="float" type="dimen">0.100</item>
+  <item name="height_toolbar_expanded" format="float" type="dimen">0.200</item>
+  <item name="height_toolbar_handle" format="float" type="dimen">0.075</item>
+
   <item name="width_drawer" format="float" type="dimen">0.700</item>
-  <item name="guide_drawer" format="float" type="dimen">@dimen/width_drawer</item>
-  <item name="width_drawer_handle_main" format="float" type="dimen">0.050</item>
   <item name="width_drawer_handle" format="float" type="dimen">0.300</item>
+  <item name="width_drawer_handle_main" format="float" type="dimen">0.200</item>
 
-  <item name="height_sheet" format="float" type="dimen">0.800</item>
-  <item name="guide_sheet" format="float" type="dimen">0.200</item>
-  <item name="height_sheet_handle" format="float" type="dimen">@dimen/guide_sheet</item>
-
-  <item name="width_button" format="float" type="dimen">0.350</item>
-  <item name="width_button_drawer" format="float" type="dimen">0.250</item>
-  <item name="width_button_sheet" format="float" type="dimen">0.300</item>
-
-  <dimen name="radius_corner_button">20dp</dimen>
+  <item name="height_sheet" format="float" type="dimen">0.900</item>
+  <item name="height_sheet_expanded" format="float" type="dimen">0.800</item>
+  <item name="height_sheet_collapse" format="float" type="dimen">0.950</item>
+  <item name="height_sheet_handle" format="float" type="dimen">0.100</item>
+  <item name="height_sheet_handle_main" format="float" type="dimen">0.150</item>
+  <item name="height_sheet_handle_expanded" format="float" type="dimen">0.200</item>
+  <item name="height_sheet_handle_collapse" format="float" type="dimen">0.050</item>
 </resources>

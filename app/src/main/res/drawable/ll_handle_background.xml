@@ -14,12 +14,12 @@
   ~     limitations under the License.
   -->
 
-<resources>
-
-  <style name="App" parent="App.Base.v27" />
-
-  <style name="App.Base.v27" parent="App.Base.v23">
-    <item name="android:windowLightNavigationBar">@bool/day_mode</item>
-    <item name="android:navigationBarColor">@android:color/transparent</item>
-  </style>
-</resources>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:gravity="center">
+    <shape android:shape="oval"
+        android:tint="@color/colorOnSurface">
+      <size android:width="12dp"
+          android:height="12dp" />
+    </shape>
+  </item>
+</layer-list>

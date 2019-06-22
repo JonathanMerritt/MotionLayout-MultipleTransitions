@@ -20,6 +20,6 @@
 
   <style name="App.Base.v23" parent="App.Base">
     <item name="android:windowLightStatusBar">@bool/day_mode</item>
-    <item name="android:statusBarColor">@color/colorSurfaceDark</item>
+    <item name="android:statusBarColor">@android:color/transparent</item>
   </style>
 </resources>

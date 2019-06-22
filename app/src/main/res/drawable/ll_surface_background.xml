@@ -14,8 +14,8 @@
   ~     limitations under the License.
   -->
 
-<resources>
-  <integer name="duration_transition_default">450</integer>
-
-  <integer name="acceleration_max_default">100</integer>
-</resources>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:drawable="@color/colorSurface" />
+  <item android:drawable="@mipmap/ic_launcher_foreground"
+      android:gravity="center|start" />
+</layer-list>

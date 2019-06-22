@@ -16,7 +16,7 @@
 
 <resources>
   <color name="colorSurface">#353535</color>
-  <color name="colorSurfaceDark">#272727</color>
+  <color name="colorSubSurface">#272727</color>
 
-  <color name="colorOnSurface">#F5F5F5</color>
+  <color name="colorOnSurface">#95CCCCCC</color>
 </resources>

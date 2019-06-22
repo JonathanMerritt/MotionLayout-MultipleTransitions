@@ -20,119 +20,37 @@
     android:id="@+id/activityMain_motion"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorSurface"
+    android:background="@color/colorSubSurface"
     app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
-  <FrameLayout
-      android:id="@+id/activityMain_drawer"
+  <View android:id="@+id/activityMain_toolbar"
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:background="@color/colorPrimaryDark"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toStartOf="@id/activityMain_drawer_guide"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintWidth_percent="@dimen/width_drawer" />
+      android:background="@drawable/ll_surface_background" />
 
-  <androidx.constraintlayout.widget.Guideline
-      android:id="@+id/activityMain_drawer_guide"
+  <View android:id="@+id/activityMain_toolbar_handle"
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:orientation="vertical"
-      app:layout_constraintGuide_percent="0.000" />
+      android:background="@drawable/ll_handle_background" />
 
-  <View
-      android:id="@+id/activityMain_drawer_handle"
+  <View android:id="@+id/activityMain_drawer"
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:layout_marginStart="34dp"
-      android:background="@color/colorSurfaceDark"
-      android:visibility="visible"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toEndOf="@id/activityMain_drawer_guide"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintWidth_percent="@dimen/width_drawer_handle_main" />
+      android:background="@drawable/ll_surface_background" />
 
-  <androidx.constraintlayout.widget.Guideline
-      android:id="@+id/activityMain_sheet_guide"
+  <View android:id="@+id/activityMain_drawer_handle"
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:orientation="horizontal"
-      app:layout_constraintGuide_percent="1.000" />
+      android:background="@drawable/ll_handle_background" />
 
-  <View
-      android:id="@+id/activityMain_sheet_handle"
+  <View android:id="@+id/activityMain_sheet"
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:background="@color/colorSurfaceDark"
-      android:visibility="visible"
-      app:layout_constraintBottom_toTopOf="@id/activityMain_sheet_guide"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHeight_percent="0.000"
-      app:layout_constraintStart_toStartOf="parent" />
+      android:background="@drawable/ll_surface_background" />
 
-  <FrameLayout
-      android:id="@+id/activityMain_sheet"
+  <View android:id="@+id/activityMain_sheet_handle"
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:background="@color/colorPrimaryDark"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHeight_percent="@dimen/height_sheet"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/activityMain_sheet_guide" />
-
-  <com.google.android.material.button.MaterialButton
-      android:id="@+id/activityMain_to_first"
-      style="@style/Widget.MaterialComponents.Button.TextButton"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-      android:alpha="0"
-      android:text="@string/title_to_first"
-      app:cornerRadius="@dimen/radius_corner_button"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHeight_percent="0.000"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="@id/activityMain_to_second"
-      app:layout_constraintWidth_percent="@dimen/width_button" />
-
-  <com.google.android.material.button.MaterialButton
-      android:id="@+id/activityMain_to_second"
-      style="@style/Widget.MaterialComponents.Button.TextButton"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:text="@string/title_to_second"
-      app:cornerRadius="@dimen/radius_corner_button"
-      app:layout_constraintBottom_toTopOf="@id/activityMain_to_drawer"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_chainStyle="packed"
-      app:layout_constraintWidth_percent="@dimen/width_button" />
-
-  <com.google.android.material.button.MaterialButton
-      android:id="@+id/activityMain_to_drawer"
-      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:text="@string/title_to_drawer"
-      app:cornerRadius="@dimen/radius_corner_button"
-      app:layout_constraintBottom_toTopOf="@id/activityMain_to_sheet"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/activityMain_to_second"
-      app:layout_constraintWidth_percent="@dimen/width_button" />
-
-  <com.google.android.material.button.MaterialButton
-      android:id="@+id/activityMain_to_sheet"
-      style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:text="@string/title_to_sheet"
-      app:cornerRadius="@dimen/radius_corner_button"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/activityMain_to_drawer"
-      app:layout_constraintWidth_percent="@dimen/width_button" />
-
+      android:background="@drawable/ll_handle_background" />
 </androidx.constraintlayout.motion.widget.MotionLayout>
