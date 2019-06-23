@@ -15,6 +15,5 @@
   -->
 
 <resources>
-  <color name="colorSurface">#353535</color>
-  <color name="colorSubSurface">#272727</color>
+  <integer name="duration_transitions">300</integer>
 </resources>

@@ -20,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.github.jonathanmerritt.motionlayout_multipletransitions.R.id.*
 import com.github.jonathanmerritt.motionlayout_multipletransitions.R.layout.activity_main
 import kotlinx.android.synthetic.main.activity_main.*
+
 class MainActivity : AppCompatActivity(activity_main) {
   override fun onBackPressed() = activityMain_motion.run {
     when (currentState) {

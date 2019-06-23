@@ -17,7 +17,7 @@
 
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:defaultDuration="300">
+    app:defaultDuration="@integer/duration_transitions">
 
   <Transition app:constraintSetEnd="@id/constraint_set_expand"
       app:constraintSetStart="@id/constraint_set_main">
@@ -25,7 +25,6 @@
         app:touchAnchorId="@id/activityMain_toolbar_handle"
         app:touchRegionId="@id/activityMain_toolbar_handle" />
   </Transition>
-
   <Transition app:constraintSetEnd="@id/constraint_set_collapse"
       app:constraintSetStart="@id/constraint_set_main">
     <OnSwipe app:dragDirection="dragUp"
@@ -33,21 +32,18 @@
         app:touchRegionId="@id/activityMain_toolbar_handle" />
   </Transition>
 
-
   <Transition app:constraintSetEnd="@id/constraint_set_drawer"
       app:constraintSetStart="@id/constraint_set_main">
     <OnSwipe app:dragDirection="dragRight"
         app:touchAnchorId="@id/activityMain_drawer_handle"
         app:touchRegionId="@id/activityMain_drawer_handle" />
   </Transition>
-
   <Transition app:constraintSetEnd="@id/constraint_set_drawer_expand"
       app:constraintSetStart="@id/constraint_set_expand">
     <OnSwipe app:dragDirection="dragRight"
         app:touchAnchorId="@id/activityMain_drawer_handle"
         app:touchRegionId="@id/activityMain_drawer_handle" />
   </Transition>
-
   <Transition app:constraintSetEnd="@id/constraint_set_drawer_collapse"
       app:constraintSetStart="@id/constraint_set_collapse">
     <OnSwipe app:dragDirection="dragRight"
@@ -55,21 +51,18 @@
         app:touchRegionId="@id/activityMain_drawer_handle" />
   </Transition>
 
-
   <Transition app:constraintSetEnd="@id/constraint_set_sheet"
       app:constraintSetStart="@id/constraint_set_main">
     <OnSwipe app:dragDirection="dragUp"
         app:touchAnchorId="@id/activityMain_sheet_handle"
         app:touchRegionId="@id/activityMain_sheet_handle" />
   </Transition>
-
   <Transition app:constraintSetEnd="@id/constraint_set_sheet_expand"
       app:constraintSetStart="@id/constraint_set_expand">
     <OnSwipe app:dragDirection="dragUp"
         app:touchAnchorId="@id/activityMain_sheet_handle"
         app:touchRegionId="@id/activityMain_sheet_handle" />
   </Transition>
-
   <Transition app:constraintSetEnd="@id/constraint_set_sheet_collapse"
       app:constraintSetStart="@id/constraint_set_collapse">
     <OnSwipe app:dragDirection="dragUp"
@@ -128,7 +121,6 @@
           app:layout_constraintStart_toEndOf="@id/activityMain_drawer_handle" />
     </Constraint>
   </ConstraintSet>
-
   <ConstraintSet android:id="@+id/constraint_set_expand"
       app:deriveConstraintsFrom="@id/constraint_set_main">
     <Constraint android:id="@id/activityMain_toolbar"
@@ -140,7 +132,6 @@
           app:layout_constraintTop_toTopOf="parent" />
     </Constraint>
   </ConstraintSet>
-
   <ConstraintSet android:id="@+id/constraint_set_collapse"
       app:deriveConstraintsFrom="@id/constraint_set_main">
     <Constraint android:id="@id/activityMain_toolbar"
@@ -172,7 +163,6 @@
           app:layout_constraintWidth_percent="@dimen/width_drawer_handle" />
     </Constraint>
   </ConstraintSet>
-
   <ConstraintSet android:id="@+id/constraint_set_drawer_expand"
       app:deriveConstraintsFrom="@id/constraint_set_drawer">
     <Constraint android:id="@id/activityMain_toolbar"
@@ -184,7 +174,6 @@
           app:layout_constraintTop_toTopOf="parent" />
     </Constraint>
   </ConstraintSet>
-
   <ConstraintSet android:id="@+id/constraint_set_drawer_collapse"
       app:deriveConstraintsFrom="@id/constraint_set_drawer">
     <Constraint android:id="@id/activityMain_toolbar"
@@ -232,7 +221,6 @@
           app:layout_constraintStart_toEndOf="@id/activityMain_drawer_handle" />
     </Constraint>
   </ConstraintSet>
-
   <ConstraintSet android:id="@+id/constraint_set_sheet_expand"
       app:deriveConstraintsFrom="@id/constraint_set_sheet">
     <Constraint android:id="@id/activityMain_toolbar"
@@ -260,7 +248,6 @@
           app:layout_constraintStart_toEndOf="@id/activityMain_drawer_handle" />
     </Constraint>
   </ConstraintSet>
-
   <ConstraintSet android:id="@+id/constraint_set_sheet_collapse"
       app:deriveConstraintsFrom="@id/constraint_set_sheet">
     <Constraint android:id="@id/activityMain_toolbar"
